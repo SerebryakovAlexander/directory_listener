@@ -1,0 +1,1 @@
+java -jar ./target/directory_listener-0.0.1-SNAPSHOT.jar
