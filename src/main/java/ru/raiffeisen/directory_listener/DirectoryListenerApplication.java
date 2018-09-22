@@ -22,35 +22,10 @@ public class DirectoryListenerApplication implements CommandLineRunner {
 		SpringApplication.run(DirectoryListenerApplication.class, args);
 	}
 
-	@Autowired
-	private DirectoryListener list;
-
 	@Override
 	public void run(String... args)
 	{
 		theLog.info("EXECUTING : command line runner");
-
-		list.subscribe(
-				new Subscriber<String>() {
-						   @Override
-						   public void onSubscribe(Subscription s) {
-							   s.request(Long.MAX_VALUE);
-						   }
-
-						   @Override
-						   public void onNext(String str) {
-							   theLog.info(str);
-						   }
-
-						   @Override
-						   public void onError(Throwable t) {
-						   }
-
-						   @Override
-						   public void onComplete() {
-						   }
-					   }
-			);
 
 		Scanner in = new Scanner(System.in);
 

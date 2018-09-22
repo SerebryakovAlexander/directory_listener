@@ -1,10 +1,10 @@
 package ru.raiffeisen.directory_listener;
 
-import org.reactivestreams.Subscriber;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import reactor.core.publisher.ConnectableFlux;
 import reactor.core.publisher.Flux;
 
 import javax.annotation.PostConstruct;
@@ -13,37 +13,48 @@ import java.util.Date;
 import java.util.function.Consumer;
 
 @Component
-public class DirectoryListener {
+public class StringEmitter {
 
     private static Logger theLog = LoggerFactory.getLogger(DirectoryListenerApplication.class);
 
-    private Flux<String> theFlux;
+    private ConnectableFlux<Object> theFlux;
 
-    private Consumer<String> stringConsumer;
+    private Consumer<String> stringEmitter;
 
     @PostConstruct
     public void init() {
         theLog.info("init");
 
         this.theFlux = Flux.create(sink -> {
-            this.registerConsumer(str -> sink.next(str));
-        });
+            this.registerStringEmitter(str -> sink.next(str));
+        }).publish();
+
+        this.theFlux.connect();
     }
 
-    public void subscribe(Subscriber<String> consumer) {
-        this.theFlux.map(str -> str.toUpperCase()).filter(str -> str.length() < 50).subscribe(consumer);
+    public ConnectableFlux<Object> getTheFlux() {
+        return theFlux;
     }
 
     @Scheduled(fixedRate = 100)
-    public void checkDirectory()
+    public void emit1()
     {
-        if (stringConsumer != null) {
-            stringConsumer.accept("emmited string " + getCurrentTimeStamp());
+        if (stringEmitter != null) {
+            stringEmitter.accept("type 1 emmited string " + getCurrentTimeStamp());
         }
     }
 
-    public void registerConsumer(Consumer<String> stringConsumer) {
-        this.stringConsumer = stringConsumer;
+    @Scheduled(fixedRate = 500)
+    public void emit2()
+    {
+        if (stringEmitter != null) {
+            stringEmitter.accept("type 2 emmited string " + getCurrentTimeStamp());
+        }
+    }
+
+
+    public void registerStringEmitter(Consumer<String> stringConsumer) {
+        this.stringEmitter = stringConsumer;
     }
 
     public static String getCurrentTimeStamp() {

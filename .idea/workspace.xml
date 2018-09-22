@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f1c94ac6-500a-4c5a-984d-e12f18a0a9a5" name="Default Changelist" comment="" />
+    <list default="true" id="f1c94ac6-500a-4c5a-984d-e12f18a0a9a5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/StringSubscriber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/Type1Subscriber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/Type2Subscriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/DirectoryListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/StringEmitter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/DirectoryListenerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/DirectoryListenerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/raiffeisen/directory_listener/DirectoryListenerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/raiffeisen/directory_listener/StringEmitterApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/raiffeisen/directory_listener/DirectoryListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/raiffeisen/directory_listener/DirectoryListenerApplication$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/raiffeisen/directory_listener/DirectoryListenerApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/raiffeisen/directory_listener/DirectoryListenerApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/raiffeisen/directory_listener/DirectoryListenerApplicationTests.class" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,29 +37,32 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="2" />
+          <entry key="class" value="1" />
+          <entry key="java" value="5" />
           <entry key="sh" value="4" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="2" />
+          <entry key="CLASS" value="1" />
+          <entry key="JAVA" value="5" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="643" />
+          <entry key="dummy" value="18" />
+          <entry key="java" value="1351" />
           <entry key="sh" value="20" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="643" />
-          <entry key="PLAIN_TEXT" value="20" />
+          <entry key="JAVA" value="1351" />
+          <entry key="PLAIN_TEXT" value="38" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
@@ -55,27 +73,64 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/DirectoryListenerApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="239">
+              <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
               <folding>
                 <element signature="e#272#273#0" expanded="true" />
                 <element signature="e#342#343#0" expanded="true" />
-                <element signature="e#996#997#0" expanded="true" />
-                <element signature="e#1032#1033#0" expanded="true" />
-                <element signature="e#1087#1088#0" expanded="true" />
-                <element signature="e#1119#1120#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/DirectoryListener.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/Type1Subscriber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+            <state relative-caret-position="288">
+              <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#212#213#0" expanded="true" />
+                <element signature="e#260#261#0" expanded="true" />
+                <element signature="e#1090#1091#0" expanded="true" />
+                <element signature="e#1134#1135#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/StringSubscriber.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/Type2Subscriber.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#212#213#0" expanded="true" />
+                <element signature="e#260#261#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/StringEmitter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="46" column="31" lean-forward="true" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1114#1115#0" expanded="true" />
+                <element signature="e#1143#1144#0" expanded="true" />
                 <element signature="e#1017#1018#0" expanded="true" />
                 <element signature="e#1069#1070#0" expanded="true" />
               </folding>
@@ -89,19 +144,24 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/MyFlux" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/run.sh" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/DirectoryListenerApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/StringSubscriber.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/DirectoryListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/StringEmitter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/Type1Subscriber.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/Type2Subscriber.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/DirectoryListenerApplication.java" />
       </list>
     </option>
   </component>
@@ -139,6 +199,32 @@
               <item name="directory_listener" type="b2602c69:ProjectViewProjectNode" />
               <item name="directory_listener" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="directory_listener" type="b2602c69:ProjectViewProjectNode" />
+              <item name="directory_listener" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="directory_listener" type="b2602c69:ProjectViewProjectNode" />
+              <item name="directory_listener" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="directory_listener" type="b2602c69:ProjectViewProjectNode" />
+              <item name="directory_listener" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="directory_listener" type="b2602c69:ProjectViewProjectNode" />
+              <item name="directory_listener" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="directory_listener" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -149,7 +235,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537612698876" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537640051819" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RunDashboard">
@@ -190,6 +276,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="813" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -216,7 +303,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" visible="true" weight="0.3297568" />
+      <window_info anchor="right" id="Maven Projects" order="7" visible="true" weight="0.18025751" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -240,29 +327,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/DirectoryListenerApplication.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/projectreactor/reactor-core/3.0.5.RELEASE/reactor-core-3.0.5.RELEASE.jar!/reactor/core/publisher/Flux.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="10797">
+          <caret line="1229" column="56" selection-start-line="1229" selection-start-column="56" selection-end-line="1229" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/StringEmitter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="46" column="31" lean-forward="true" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
           <folding>
-            <element signature="e#272#273#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1032#1033#0" expanded="true" />
-            <element signature="e#1087#1088#0" expanded="true" />
-            <element signature="e#1119#1120#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1114#1115#0" expanded="true" />
+            <element signature="e#1143#1144#0" expanded="true" />
+            <element signature="e#1017#1018#0" expanded="true" />
+            <element signature="e#1069#1070#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/DirectoryListener.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/StringSubscriber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/DirectoryListenerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
+          <folding>
+            <element signature="e#272#273#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/Type1Subscriber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1017#1018#0" expanded="true" />
-            <element signature="e#1069#1070#0" expanded="true" />
+            <element signature="e#212#213#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1134#1135#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/raiffeisen/directory_listener/Type2Subscriber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#212#213#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
           </folding>
         </state>
       </provider>
