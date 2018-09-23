@@ -17,7 +17,7 @@ public class StringEmitter {
 
     private static Logger theLog = LoggerFactory.getLogger(DirectoryListenerApplication.class);
 
-    private ConnectableFlux<Object> theFlux;
+    private ConnectableFlux<String> theFlux;
 
     private Consumer<String> stringEmitter;
     private Consumer<Throwable> errorEmitter;
@@ -32,24 +32,24 @@ public class StringEmitter {
         this.theFlux = Flux.create(sink -> {
             this.registerStringEmitter(str -> sink.next(str));
             //this.registerErrorEmitter(err -> sink.error(err));
-        }).publish();
+        }).map(o -> o.toString().toUpperCase()).publish();
 
         this.theFlux.connect();
     }
 
-    public ConnectableFlux<Object> getTheFlux() {
+    public ConnectableFlux<String> getTheFlux() {
         return theFlux;
     }
 
     @Scheduled(fixedRate = 100)
     public void emit1()
     {
-        if (i1 < 50) {
+        if (i1 < 50 || (i1 > 500 && i1 < 550)) {
             String s = "type 1 emmited string " + getCurrentTimeStamp() + " " + i1;
-            i1++;
             stringEmitter.accept(s);
             theLog.info("emitted " + s);
         }
+        i1++;
     }
 
     @Scheduled(fixedRate = 200)

@@ -16,7 +16,7 @@ public class Type2Subscriber implements StringSubscriber {
 
     private static Logger theLog = LoggerFactory.getLogger(DirectoryListenerApplication.class);
 
-    private ParallelFlux<Object> theFlux;
+    private ParallelFlux<String> theFlux;
 
     private Subscription subscription;
 
@@ -31,7 +31,7 @@ public class Type2Subscriber implements StringSubscriber {
 
         this.theFlux = Flux.from(stringEmitter.getTheFlux()).parallel().runOn(Schedulers.newSingle("ss2"));
 
-        this.theFlux.map(o -> ((String)o).toUpperCase()).filter(str -> str.startsWith(type)).subscribe(this);
+        this.theFlux.filter(str -> str.startsWith(type)).subscribe(this);
     }
 
     @Override
