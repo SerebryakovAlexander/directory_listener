@@ -20,6 +20,10 @@ public class StringEmitter {
     private ConnectableFlux<Object> theFlux;
 
     private Consumer<String> stringEmitter;
+    private Consumer<Throwable> errorEmitter;
+
+    private Integer i1 = 0;
+    private Integer i2 = 0;
 
     @PostConstruct
     public void init() {
@@ -27,6 +31,7 @@ public class StringEmitter {
 
         this.theFlux = Flux.create(sink -> {
             this.registerStringEmitter(str -> sink.next(str));
+            //this.registerErrorEmitter(err -> sink.error(err));
         }).publish();
 
         this.theFlux.connect();
@@ -39,26 +44,36 @@ public class StringEmitter {
     @Scheduled(fixedRate = 100)
     public void emit1()
     {
-        if (stringEmitter != null) {
-            stringEmitter.accept("type 1 emmited string " + getCurrentTimeStamp());
+        if (i1 < 50) {
+            String s = "type 1 emmited string " + getCurrentTimeStamp() + " " + i1;
+            i1++;
+            stringEmitter.accept(s);
+            theLog.info("emitted " + s);
         }
     }
 
-    @Scheduled(fixedRate = 500)
+    @Scheduled(fixedRate = 200)
     public void emit2()
     {
-        if (stringEmitter != null) {
-            stringEmitter.accept("type 2 emmited string " + getCurrentTimeStamp());
+        if (i2 < 50) {
+            String s = "type 2 emmited string " + getCurrentTimeStamp() + " " + i2;
+            i2++;
+            stringEmitter.accept(s);
+            theLog.info("emitted " + s);
         }
     }
-
 
     public void registerStringEmitter(Consumer<String> stringConsumer) {
         this.stringEmitter = stringConsumer;
     }
 
+    public void registerErrorEmitter(Consumer<Throwable> errorEmitter) {
+        this.errorEmitter = errorEmitter;
+
+    }
+
     public static String getCurrentTimeStamp() {
-        SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//dd/MM/yyyy
+        SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");//dd/MM/yyyy
         Date now = new Date();
         String strDate = sdfDate.format(now);
         return strDate;

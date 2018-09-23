@@ -18,6 +18,8 @@ public class Type2Subscriber implements StringSubscriber {
 
     private ParallelFlux<Object> theFlux;
 
+    private Subscription subscription;
+
     private String type = "TYPE 2";
 
     @Autowired
@@ -27,14 +29,15 @@ public class Type2Subscriber implements StringSubscriber {
     public void init() {
         theLog.info("type 2 init");
 
-        this.theFlux = Flux.from(stringEmitter.getTheFlux()).parallel().runOn(Schedulers.parallel());
+        this.theFlux = Flux.from(stringEmitter.getTheFlux()).parallel().runOn(Schedulers.newSingle("ss2"));
 
         this.theFlux.map(o -> ((String)o).toUpperCase()).filter(str -> str.startsWith(type)).subscribe(this);
     }
 
     @Override
     public void onSubscribe(Subscription s) {
-        s.request(Long.MAX_VALUE);
+        this.subscription = s;
+        s.request(1);
     }
 
     @Override
@@ -42,20 +45,23 @@ public class Type2Subscriber implements StringSubscriber {
         theLog.info("subs 2 " + str);
         try
         {
-            Thread.sleep(500);
+            Thread.sleep(5000);
         }
         catch (Exception e)
         {
 
         }
+        this.subscription.request(1);
     }
 
     @Override
     public void onError(Throwable t) {
+        theLog.info(t.toString());
     }
 
     @Override
     public void onComplete() {
+        theLog.info("subs2 completed");
     }
 
 }
