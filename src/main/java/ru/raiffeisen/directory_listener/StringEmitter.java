@@ -35,6 +35,8 @@ public class StringEmitter {
         }).map(o -> o.toString().toUpperCase()).publish();
 
         this.theFlux.connect();
+
+        //this.theFlux.subscribe(str -> theLog.info(str));
     }
 
     public ConnectableFlux<String> getTheFlux() {
