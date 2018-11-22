@@ -230,6 +230,17 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ru.raiffeisen.directory_listener.DirectoryListenerApplication" />
+      <module name="directory_listener" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="directory_listener" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ru.raiffeisen.directory_listener.DirectoryListenerApplication" />
       <module name="directory_listener" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <method v="2">
